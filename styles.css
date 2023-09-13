@@ -206,7 +206,7 @@ footer {
 }
 
 nav {
-	position:relative;
+	position: relative;
 	width: 800px;
 	margin: 0px auto 0px;
 
@@ -215,7 +215,7 @@ nav {
 .container {
 	margin: 0;
 	padding: 0;
-	display:flex;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-width: 800px;
@@ -241,11 +241,12 @@ nav {
 
 .container-logo h2 span {
 	color: #0175b2;
-	font-weight: 500;
+	font-weight: 700;
 }
 
 .links .link {
-	margin: 30px;
+	display: inline-block;
+	margin: 10px;
 	padding: 0;
 	background: #26252d;
 
@@ -270,6 +271,7 @@ nav {
 	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
 	transition-delay: 1s;
 }
+
 
 .links .link a span {
 	position: absolute;
@@ -336,10 +338,42 @@ nav {
 	transition-delay: 0.75s;
 }
 
+.toggle {
+	color: #fff;
+	margin-right: 10px;
+	font-size: 30px;
+	transform: rotate(90deg);
+	cursor: pointer;
+	transition: .3s;
+	position: relative;
+	display: none;
+
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
 
 
 
 @media screen and (max-width: 800px) {
+
+	.container {
+	justify-content: center;
+	
+	}
+	
+	.container-logo h2 {
+		font-size: 25px;
+		letter-spacing: 2px;
+	}
+
+	.container-logo h2 span {
+        font-size: 25px;
+		
+    }
+
+
 	.resume_wrapper .resume_right .resume_namerole {
 		display: none;
 	}
@@ -358,6 +392,34 @@ nav {
 	.resume_wrapper .resume_right {
 		width: 100%;
 	}
+
+	.toggle {
+		display: inline-block;
+	}
+
+	.links {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		background: #26252d;
+		text-align: center;
+		overflow: hidden;
+		height: calc(100vh - 80px);
+		width: 100%;
+		top: -100vh;
+		z-index: -1;
+		transition: .5s;
+	}
+
+	.links.link:hover {
+		background: #255784;
+	}
+
+	.active {
+		top: 80px;
+	}
+
+
 }
 
 @media screen and (max-width: 424px) {
