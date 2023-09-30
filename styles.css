@@ -1,4 +1,12 @@
+/* Importar la fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos globales */
+
+:root {
+	--color-1: #26252d;
+	;
+}
 
 * {
 	margin: 0;
@@ -12,31 +20,127 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+
+/* Estilos para el cuerpo del documento */
 body {
 	background: #c4c4c4;
 	font-size: 14px;
 	line-height: 20px;
 }
 
+ul {
+	list-style: none;
+}
 
-.header {
+.container {
+	max-width: 800px;
 
-	top: 0;
-	left: 0;
-	width: 800px;
-	height: 110px;
-	padding: 1rem 3%;
-	background: transparent;
-	display: block;
 	margin: auto;
-	justify-content: space-between;
+
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.align-items-center {
 	align-items: center;
-	text-align: center;
-	z-index: 100;
-	background: #26252d;
+}
+
+.justify-content-center {
+	justify-content: space-between;
+}
+
+/* Estilos para el logotipo en el contenedor principal */
+.header-logo {
+	font-size: 2.5rem;
+	cursor: pointer;
+	margin: auto;
 }
 
 
+
+.header-logo h2 {
+	color: #fff;
+	font-size: 25px;
+	letter-spacing: 2px;
+}
+
+
+.header-logo h2 span {
+	color: #0175b2;
+	font-weight: 700;
+}
+
+/* header */
+.header {
+	background-color: var(--color-1);
+	padding: 12px 0;
+}
+
+.header .header-logo,
+.header .navbar {
+	padding: 0 15px;
+}
+
+.header .navbar ul li {
+	display: inline-block;
+	margin-left: 40px;
+}
+
+.header .navbar ul li a {
+	font-size: 12px;
+	text-transform: uppercase;
+
+}
+
+.nav-toggler {
+	height: 34px;
+	width: 44px;
+	background-color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	border: none;
+	display: none;
+	margin-right: 15px;
+}
+
+.nav-toggler:focus {
+	outline: none;
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.nav-toggler span {
+	height: 2px;
+	width: 20px;
+	background-color: var(--color-1);
+	display: block;
+	margin: auto;
+	position: relative;
+}
+
+.nav-toggler span::before,
+.nav-toggler span::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-1);
+}
+
+.nav-toggler span::before {
+	transform: translateY(-6px);
+}
+
+.nav-toggler span::after {
+	transform: translateY(6px);
+}
+
+/* Estilos para la barra de navegación */
 .navbar {
 	font-size: 1.7rem;
 	font-weight: 500;
@@ -50,57 +154,25 @@ body {
 	justify-content: space-between;
 }
 
-#menu-icon {
-	font-size: 3.6rem;
-	color: #fff;
-	cursor: pointer;
-	display: none;
 
-}
 
+/* Estilos para el pie de página */
 footer {
 	text-align: center;
-	background: rgb(2, 0, 36);
 	background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(2, 0, 36, 1) 35%, rgba(1, 117, 178, 1) 100%);
-	Color: #fff;
+	color: #fff;
 	width: 800px;
 	height: 60px;
 	display: block;
 	align-items: center;
-	Margin: 0px auto;
+	margin: 0px auto;
 	padding-top: 10px;
 }
 
-.container {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	min-width: 800px;
-	min-height: 60px;
-	background: #26252d;
-	z-index: 100;
+/* Estilos para el contenedor principal */
 
-}
 
-.container-logo {
-	font-size: 2.5rem;
-	cursor: pointer;
 
-}
-
-.container-logo h2 {
-	color: #fff;
-
-	font-size: 25px;
-	letter-spacing: 4px;
-}
-
-.container-logo h2 span {
-	color: #0175b2;
-	font-weight: 700;
-}
 
 .container-resume {
 	display: flex;
@@ -110,11 +182,13 @@ footer {
 	padding: 10px;
 }
 
+/* Estilos para la columna izquierda del currículum */
 .container-resume .resume_left {
 	width: 35%;
 	background: #26252d;
 }
 
+/* Estilos para la imagen del currículum */
 .container-resume .resume_left .resume_image {
 	width: 100%;
 }
@@ -123,6 +197,7 @@ footer {
 	width: 100%;
 	display: block;
 }
+
 
 .container-resume .resume_title {
 	color: #fff;
@@ -133,28 +208,34 @@ footer {
 	letter-spacing: 4px;
 }
 
+
 .container-resume .resume_left .resume_info {
 	color: #84838b;
 }
 
+
 .container-resume .resume_left .resume_bottom {
 	padding: 20px 30px;
 }
+
 
 .container-resume .resume_item {
 	padding: 20px 0;
 	border-bottom: 1px solid #0175b2;
 }
 
+
 .container-resume .resume_item:last-child {
 	border-bottom: 0;
 }
+
 
 .container-resume .resume_left .resume_namerole {
 	display: none;
 }
 
-.container-resume .resume_namerole .name {
+/* Estilos para el nombre en la columna izquierda del currículum */
+.container-resume .resume_left .resume_namerole .name {
 	font-size: 20px;
 	color: #fff;
 	text-transform: uppercase;
@@ -163,18 +244,22 @@ footer {
 	letter-spacing: 4px;
 }
 
+
 .container-resume .resume_left .resume_namerole .role {
 	color: #84838b;
 }
+
 
 .container-resume .resume_left .resume_contact .resume_info:last-child {
 	margin-top: 10px;
 }
 
+
 .container-resume .resume_left .resume_contact .resume_subtitle {
 	color: #fff;
 	margin-bottom: 2px;
 }
+
 
 .container-resume .resume_left .resume_skills .skills_list {
 	display: flex;
@@ -182,12 +267,14 @@ footer {
 	margin-bottom: 5px;
 }
 
+
 .container-resume .resume_left .resume_skills .skills_list .skills_bar p {
 	position: relative;
 	width: 125px;
 	height: 20px;
 	background: #fff;
 }
+
 
 .container-resume .resume_left .resume_skills .skills_list .skills_bar p span {
 	position: absolute;
@@ -198,35 +285,42 @@ footer {
 	height: 100%;
 }
 
+
 .container-resume .resume_right {
 	width: 65%;
 	padding: 20px 40px;
 	color: #26252d;
 }
 
+
 .container-resume .resume_right .resume_namerole .name {
 	color: #26252d;
 	font-size: 24px;
 }
+
 
 .container-resume .resume_right .resume_namerole .role {
 	font-size: 14px;
 	text-transform: uppercase;
 }
 
+
 .container-resume .resume_right .resume_item .resume_title {
 	color: #26252d;
 }
 
+
 .container-resume .resume_right .resume_data {
 	display: flex;
 }
+
 
 .container-resume .resume_right .resume_data .year {
 	padding-right: 35px;
 	width: 115px;
 	position: relative;
 }
+
 
 .container-resume .resume_right .resume_data .content {
 	padding-left: 35px;
@@ -272,21 +366,18 @@ footer {
 	text-align: center;
 }
 
-
-
 .container-resume .resume_right .resmue_interests .interests .int_icon {
 	font-size: 38px;
 	color: #0175b2;
 	margin-bottom: 10px;
 }
 
-/* botones animados*/
+/* Estilos para los botones animados */
 .links .link {
 	display: inline-block;
-	margin: 10px;
+	margin: auto;
 	padding: 0;
 	background: #26252d;
-
 }
 
 .links .link a {
@@ -309,12 +400,12 @@ footer {
 	transition-delay: 1s;
 }
 
-
 .links .link a span {
 	position: absolute;
 	display: block;
 }
 
+/* Animación de la línea superior al pasar el mouse */
 .links .link a span:nth-child(1) {
 	top: 0;
 	left: -100%;
@@ -323,12 +414,12 @@ footer {
 	background: linear-gradient(90deg, transparent, #2196f3);
 }
 
-
 .links .link a:hover span:nth-child(1) {
 	left: 100%;
 	transition: 1s;
 }
 
+/* Animación de la línea inferior al pasar el mouse */
 .links .link a span:nth-child(3) {
 	bottom: 0;
 	right: -100%;
@@ -337,14 +428,13 @@ footer {
 	background: linear-gradient(270deg, transparent, #2196f3);
 }
 
-
-
 .links .link a:hover span:nth-child(3) {
 	right: 100%;
 	transition: 1s;
 	transition-delay: 0.5s;
 }
 
+/* Animación de la línea derecha al pasar el mouse */
 .links .link a span:nth-child(2) {
 	top: -100%;
 	right: 0;
@@ -359,8 +449,7 @@ footer {
 	transition-delay: 0.25s;
 }
 
-
-
+/* Animación de la línea izquierda al pasar el mouse */
 .links .link a span:nth-child(4) {
 	bottom: -100%;
 	left: 0;
@@ -375,32 +464,49 @@ footer {
 	transition-delay: 0.75s;
 }
 
-
+/* Rotación del icono */
 .rotate {
 	transform: rotate(180deg);
 }
 
-/* formato para dispositivos moviles */
-
+/* Estilos para dispositivos móviles */
 @media screen and (max-width: 800px) {
 
-	.header {
-		display: flex;
-		align-items: center;
 
+	.header .navbar {
+		width: 100%;
+		padding: 0;
+		max-height: 0px;
+		overflow: hidden;
+		visibility: hidden;
+		transition: all 0.5s ease;
+	}
 
+	.header .navbar.open{
+		visibility: visible;
+	}
 
+	.header .navbar ul {
+		padding: 12px 15px 0;
+		margin-top: 12px;
+		border-top: 1px solid rgba(155, 255, 255, 0.2);
+	}
 
+	.header .navbar ul li {
+		display: block;
+		margin: 0;
+	}
+
+	.nav-toggler {
+		display: block;
 	}
 
 	footer {
 		width: auto;
-
 	}
 
 	.container {
 		justify-content: center;
-
 	}
 
 	.container-logo h2 {
@@ -410,11 +516,7 @@ footer {
 
 	.container-logo h2 span {
 		font-size: 25px;
-
 	}
-
-
-
 
 	.container-resume .resume_right .resume_namerole {
 		display: none;
@@ -435,37 +537,10 @@ footer {
 		width: 100%;
 	}
 
-	#menu-icon {
-		display: inline-block;
-		font-size: 25px;
-	}
-
-	.links {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		background: #26252d;
-		text-align: center;
-		overflow: hidden;
-		height: calc(100vh - 80px);
-		width: 100%;
-		top: -100vh;
-		z-index: -1;
-		transition: .5s;
-	}
-
-	.links.link:hover {
-		background: #255784;
-	}
-
-	.active {
-		top: 80px;
-	}
-
-
 
 }
 
+/* Estilos adicionales para dispositivos móviles con pantalla pequeña */
 @media screen and (max-width: 424px) {
 	.container-resume .resume_right {
 		padding: 20px 30px;
@@ -495,5 +570,4 @@ footer {
 	.container-resume .resume_right .resmue_interests .interests .int_icon {
 		font-size: 24px;
 	}
-
 }
