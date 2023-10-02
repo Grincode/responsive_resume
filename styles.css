@@ -5,23 +5,22 @@
 
 :root {
 	--color-1: #26252d;
-
+	--color-2: #0175b2;
+	--color-3: #84838b;
+	--color-4: #fff;
+	--color-5: #26252d;
 }
 
 * {
 	margin: 0;
 	padding: 0;
-	list-style: none;
 	box-sizing: border-box;
-	text-decoration: none;
 	border: none;
 	outline: none;
 	scroll-behavior: smooth;
 	font-family: 'Roboto', sans-serif;
 }
 
-
-/* Estilos para el cuerpo del documento */
 body {
 	background: #c4c4c4;
 	font-size: 14px;
@@ -32,12 +31,22 @@ ul {
 	list-style: none;
 }
 
+a {
+	text-decoration: none;
+}
+
 .container {
 	max-width: 800px;
 
 	margin: auto;
-
 }
+
+.header .logo,
+.header .nav {
+	padding: 0 15px;
+}
+
+/* Estilos para el cuerpo del documento */
 
 .row {
 	display: flex;
@@ -53,53 +62,47 @@ ul {
 	justify-content: space-between;
 }
 
-/* Estilos para el logotipo en el contenedor principal */
-.header-logo {
-	font-size: 2.5rem;
-	cursor: pointer;
-	margin: auto;
-}
-
-
-
-.header-logo h2 {
-	color: #fff;
-	font-size: 25px;
-	letter-spacing: 2px;
-}
-
-
-.header-logo h2 span {
-	color: #0175b2;
-	font-weight: 700;
-}
-
 /* header */
 .header {
 	background-color: var(--color-1);
 	padding: 12px 0;
+	line-height: 1.5;
 }
 
-.header .header-logo,
-.header .navbar {
+.header .nav,
+.header .nav {
 	padding: 0 15px;
 }
 
-.header .navbar ul li {
+.header .logo a {
+	font-size: 30px;
+	color: #fff;
+
+}
+
+.header .nav ul li {
 	display: inline-block;
 	margin-left: 40px;
 }
 
-.header .navbar ul li a {
-	font-size: 12px;
+.header .nav ul li a {
+	display: block;
+	font-size: 16px;
 	text-transform: uppercase;
+	color: #fff;
+	padding: 10px 0;
+	transition: all 0.5s ease;
+}
 
+.header .nav ul li a.active,
+.header .nav ul li a:hover {
+	color: var(--color-2);
 }
 
 .nav-toggler {
 	height: 34px;
 	width: 44px;
-	background-color: #fff;
+	background-color: var(--color-4);
 	border-radius: 4px;
 	cursor: pointer;
 	border: none;
@@ -135,6 +138,7 @@ ul {
 	width: 100%;
 	height: 100%;
 	background-color: var(--color-1);
+	transition: all 0.3s ease;
 }
 
 .nav-toggler span::before {
@@ -154,18 +158,7 @@ ul {
 }
 
 /* Estilos para la barra de navegación */
-.navbar {
-	font-size: 1.7rem;
-	font-weight: 500;
-	margin-left: 3.5rem;
-	width: 100%;
-	height: 60px;
-	max-width: 800px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
+
 
 
 
@@ -173,7 +166,7 @@ ul {
 footer {
 	text-align: center;
 	background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(2, 0, 36, 1) 35%, rgba(1, 117, 178, 1) 100%);
-	color: #fff;
+	color: var(--color-4);
 	width: 800px;
 	height: 60px;
 	display: block;
@@ -187,14 +180,14 @@ footer {
 	display: flex;
 	width: 800px;
 	margin: 0px auto;
-	background: #fff;
+	background: var(--color-4);
 	padding: 10px;
 }
 
 /* Estilos para la columna izquierda del currículum */
 .container-resume .resume_left {
 	width: 35%;
-	background: #26252d;
+	background: var(--color-5);
 }
 
 /* Estilos para la imagen del currículum */
@@ -202,6 +195,7 @@ footer {
 	width: 100%;
 }
 
+/* Estilos de la pagina principal */
 .container-resume .resume_left .resume_image img {
 	width: 100%;
 	display: block;
@@ -209,7 +203,7 @@ footer {
 
 
 .container-resume .resume_title {
-	color: #fff;
+	color: var(--color-4);
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 16px;
@@ -219,7 +213,7 @@ footer {
 
 
 .container-resume .resume_left .resume_info {
-	color: #84838b;
+	color: var(--color-3);
 }
 
 
@@ -230,7 +224,7 @@ footer {
 
 .container-resume .resume_item {
 	padding: 20px 0;
-	border-bottom: 1px solid #0175b2;
+	border-bottom: 1px solid var(--color-2);
 }
 
 
@@ -246,7 +240,7 @@ footer {
 /* Estilos para el nombre en la columna izquierda del currículum */
 .container-resume .resume_left .resume_namerole .name {
 	font-size: 20px;
-	color: #fff;
+	color: var(--color-4);
 	text-transform: uppercase;
 	font-weight: 700;
 	margin-bottom: 5px;
@@ -255,7 +249,7 @@ footer {
 
 
 .container-resume .resume_left .resume_namerole .role {
-	color: #84838b;
+	color: var(--color-3);
 }
 
 
@@ -265,7 +259,7 @@ footer {
 
 
 .container-resume .resume_left .resume_contact .resume_subtitle {
-	color: #fff;
+	color: var(--color-4);
 	margin-bottom: 2px;
 }
 
@@ -281,7 +275,7 @@ footer {
 	position: relative;
 	width: 125px;
 	height: 20px;
-	background: #fff;
+	background: var(--color-4);
 }
 
 
@@ -289,7 +283,7 @@ footer {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #0175b2;
+	background: var(--color-2);
 	width: 100%;
 	height: 100%;
 }
@@ -298,12 +292,12 @@ footer {
 .container-resume .resume_right {
 	width: 65%;
 	padding: 20px 40px;
-	color: #26252d;
+	color: var(--color-1);
 }
 
 
 .container-resume .resume_right .resume_namerole .name {
-	color: #26252d;
+	color: var(--color-1);
 	font-size: 24px;
 }
 
@@ -315,7 +309,7 @@ footer {
 
 
 .container-resume .resume_right .resume_item .resume_title {
-	color: #26252d;
+	color: var(--color-1);
 }
 
 
@@ -338,7 +332,7 @@ footer {
 }
 
 .container-resume .resume_right .resume_data .content :first-child {
-	color: #0175b2;
+	color: var(--color-2);
 	font: bold;
 	font-size: 16px;
 }
@@ -350,8 +344,8 @@ footer {
 	right: 0;
 	width: 10px;
 	height: 10px;
-	background: #fff;
-	border: 1px solid #26252d;
+	background: var(--color-4);
+	border: 1px solid var(--color-1);
 	border-radius: 50%;
 }
 
@@ -362,7 +356,7 @@ footer {
 	right: 4px;
 	width: 3px;
 	height: 90%;
-	background: #0175b2;
+	background: var(--color-2);
 }
 
 .container-resume .resume_right .resume_data:last-child .year:after {
@@ -377,130 +371,36 @@ footer {
 
 .container-resume .resume_right .resume_interests .interests .int_icon {
 	font-size: 38px;
-	color: #0175b2;
+	color: var(--color-2);
 	margin-bottom: 10px;
 }
-
-/* Estilos para los botones animados */
-.links .link {
-	display: inline-block;
-	margin: auto;
-	padding: 0;
-	background: #26252d;
-}
-
-.links .link a {
-	position: relative;
-	display: inline-block;
-	padding: 7px 15px;
-	color: #2196f3;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	text-decoration: none;
-	font-size: 14px;
-	overflow: hidden;
-	transition: 0.2s;
-}
-
-.links .link a:hover {
-	color: #255784;
-	background: #2196f3;
-	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
-	transition-delay: 1s;
-}
-
-.links .link a span {
-	position: absolute;
-	display: block;
-}
-
-/* Animación de la línea superior al pasar el mouse */
-.links .link a span:nth-child(1) {
-	top: 0;
-	left: -100%;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(90deg, transparent, #2196f3);
-}
-
-.links .link a:hover span:nth-child(1) {
-	left: 100%;
-	transition: 1s;
-}
-
-/* Animación de la línea inferior al pasar el mouse */
-.links .link a span:nth-child(3) {
-	bottom: 0;
-	right: -100%;
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(270deg, transparent, #2196f3);
-}
-
-.links .link a:hover span:nth-child(3) {
-	right: 100%;
-	transition: 1s;
-	transition-delay: 0.5s;
-}
-
-/* Animación de la línea derecha al pasar el mouse */
-.links .link a span:nth-child(2) {
-	top: -100%;
-	right: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(180deg, transparent, #2196f3);
-}
-
-.links .link a:hover span:nth-child(2) {
-	top: 100%;
-	transition: 1s;
-	transition-delay: 0.25s;
-}
-
-/* Animación de la línea izquierda al pasar el mouse */
-.links .link a span:nth-child(4) {
-	bottom: -100%;
-	left: 0;
-	width: 2px;
-	height: 100%;
-	background: linear-gradient(360deg, transparent, #2196f3);
-}
-
-.links .link a:hover span:nth-child(4) {
-	bottom: 100%;
-	transition: 1s;
-	transition-delay: 0.75s;
-}
-
-
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 800px) {
 
 
-	.header .navbar {
+	.header .nav {
 		width: 100%;
 		padding: 0;
 		max-height: 0px;
 		overflow: hidden;
 		visibility: hidden;
 		transition: all 0.5s ease;
-		/* background-color: red; */
+		
 	}
 
-	.header .navbar.open {
+	.header .nav.open {
 		visibility: visible;
 	}
 
-	.header .navbar ul {
+	.header .nav ul {
 		padding: 12px 15px 0;
 		margin-top: 12px;
 		border-top: 1px solid rgba(155, 255, 255, 0.2);
 
 	}
 
-	.header .navbar ul li {
+	.header .nav ul li {
 		display: block;
 		margin: 0;
 	}
@@ -513,18 +413,7 @@ footer {
 		width: auto;
 	}
 
-	.container {
-		justify-content: center;
-	}
 
-	.container-logo h2 {
-		font-size: 25px;
-		letter-spacing: 2px;
-	}
-
-	.container-logo h2 span {
-		font-size: 25px;
-	}
 
 	.container-resume .resume_right .resume_namerole {
 		display: none;
@@ -562,7 +451,7 @@ footer {
 		padding: 0;
 		margin-bottom: 5px;
 		width: 100%;
-		color: #0175b2;
+		color: var(--color-2);
 	}
 
 	.container-resume .resume_right .resume_data .year:before,
